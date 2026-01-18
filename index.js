@@ -5,6 +5,8 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const morgan = require("morgan");
+app.use(morgan("dev"));
 
 const PORT = process.env.PORT || 3000;
 const connectDB = require("./config/dbConnect");
